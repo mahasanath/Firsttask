@@ -91,36 +91,36 @@ README
 
 The commands in use are as follows:
 
-1. Installing required dependencies:
-   sudo add-apt-repository ppa:webupd8team/java
-   sudo apt-get update
+1. Installing required dependencies:  
+   sudo add-apt-repository ppa:webupd8team/java  
+   sudo apt-get update  
    sudo apt-get install oracle-java7-installer maven git-core
    
-2. Creating slave user
+2. Creating slave user  
    sudo adduser theslave
 
-3. sudo apt-get install openssh-server
+3. sudo apt-get install openssh-server  
    sudo vim /etc/ssh/sshd_config
 
-4. Appending to the end of file:
+4. Appending to the end of file:  
    AllowUsers theslave
 
-5. Restarting ssh server:
-   restart ssh server
+5. Restarting ssh server:  
+   restart ssh server  
    sudo restart ssh
 
-6. Switch user:
+6. Switch user:  
    sudo su theslave
 
-7. Creating ssh directory and giving permissions:
-   mkdir ~/.ssh
+7. Creating ssh directory and giving permissions:  
+   mkdir ~/.ssh  
    chmod 700 ~/.ssh
 
-8. Run the ssh-keygen command:
+8. Run the ssh-keygen command:  
    ssh-keygen -t rsa
 
-9. Copy the contents of id_rsa public key. 
-   cd .ssh
+9. Copy the contents of id_rsa public key.    
+   cd .ssh  
    cat id_rsa.pub >> authorized_keys
 
 10.Copy the id_rsa private key into jenkins manage credentials for "theslave" 
