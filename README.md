@@ -14,8 +14,8 @@ README
 
 > Install Apache
   
-  sudo apt-get install apache2
-  sudo a2enmod proxy
+  sudo apt-get install apache2  
+  sudo a2enmod proxy  
   sudo a2enmod proxy_http
 
 > Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxy to port
@@ -33,18 +33,18 @@ README
 
 > Enable it
   
-  sudo a2ensite jenkins
+  sudo a2ensite jenkins  
   sudo service apache2 reload
 
 > Installing dependencies for our build server : Java / Maven / Git
   
-  sudo add-apt-repository ppa:webupd8team/java
-  sudo apt-get update
+  sudo add-apt-repository ppa:webupd8team/java  
+  sudo apt-get update  
   sudo apt-get install oracle-java7-installer maven git-core
 
 ####Tasks explained
 -------------------
-##### The ability to trigger a build in response to a git commit via a git hook.
+1. ##### The ability to trigger a build in response to a git commit via a git hook.
 
 > To configure Github to trigger a build in response to a push made by the user,
   go to the settings page of the project. Select the "jenkins (git plugin)" from the
@@ -65,7 +65,7 @@ README
 ![Success message](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/lastsuccess_task1.png)
 
 
-##### The ability to setup dependencies for the project and restore to a clean state.
+2. ##### The ability to setup dependencies for the project and restore to a clean state.
 >  The screenshots below demonstrate the task. When the project is first loaded, the dependencies are
    installed, target files are created and the project is built.
 
@@ -74,12 +74,12 @@ README
 > For restoring to a clean state:  
   mvn clean
 
-##### The ability to execute a build script (e.g., shell, maven)
+3. ##### The ability to execute a build script (e.g., shell, maven)
 > The screenshots below demonstrate the task.
 
 ![BUILD SUCCESS](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildsuccess.png)
 
-##### The ability to run a build on multiple nodes (e.g. jenkins slaves, go agents, or a spawned droplet/AWS.).
+4. ##### The ability to run a build on multiple nodes (e.g. jenkins slaves, go agents, or a spawned droplet/AWS.).
 >  To create and configure slave nodes (in the Jenkins master) that would be ready to accept the tasks delegated
    by the master. The following steps are for setup:
  
@@ -153,7 +153,7 @@ The commands in use are as follows:
 > The slaves are online.
 ![Online slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/after_theslavelaunched.JPG)
 
-##### The ability to retrieve the status of the build via http.
+5. ##### The ability to retrieve the status of the build via http.
 > The status of the build can be retrieved by using the following 
   command: curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/job/testslavemaven/lastBuild/api/json
   
