@@ -18,8 +18,7 @@ README
   sudo a2enmod proxy  
   sudo a2enmod proxy_http
 
-> Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxy to port
-  
+> Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxy to po
 " <VirtualHost *:80>  
 ServerName HOSTNAME   
   ProxyRequests Off  
