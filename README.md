@@ -1,5 +1,3 @@
-# Firsttask
-
 README
 ======
 
@@ -13,41 +11,32 @@ README
   Jenkins master. In our case "http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/"
   and select the checkbox "Active". This configuration can be seen below-
 
-  ![Alt text][t1id1]
-  [t1id1]: ./.png 
+![GitHook_configuration](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_githook.JPG)
   
 > To demonstrate this task, the screenshot below is of the **console output**
   that reads the following line "Started by an SCM change" (which means it was triggered by a 
   git push)
 
-  ![Alt text][t1id2]
-  [t1id2]: ./.png 
+![SCM change](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildbyscm_task1.JPG)
 
 > The "Jenkins (git plugin)" in github further affirms that the last delivery was successful.
 
-  ![Alt text][t1id3]
-  [t1id3]: ./.png 
+![Success message](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/lastsuccess_task1.png)
 
 
 ##### The ability to setup dependencies for the project and restore to a clean state.
 >  The screenshots below demonstrate the task. When the project is first loaded, the dependencies are
    installed, target files are created and the project is built.
 
-  ![Alt text][t2id1]
-  [t2id1]: ./.png 
+ ![Build is successful](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/nuildsuccess.JPG)
 
 > For restoring to a clean state:  
   mvn clean
 
-  ![Alt text][t2id2]
-  [t2id2]: ./.png 
-
 ##### The ability to execute a build script (e.g., shell, maven)
 > The screenshots below demonstrate the task.
 
-![Alt text][t3id3]
-  [t3id3]: ./.png  
-
+![BUILD SUCCESS](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildsuccess.png)
 
 ##### The ability to run a build on multiple nodes (e.g. jenkins slaves, go agents, or a spawned droplet/AWS.).
 >  To create and configure slave nodes (in the Jenkins master) that would be ready to accept the tasks delegated
@@ -98,30 +87,30 @@ The commands in use are as follows:
 > In our project, we have created two slaves 'theslave' and 'jenkins' to demonstrate 
   the ability to run build on multiple nodes. For the purpose of this task, we have 
   changed the number of executors to 0. So that the incoming build request will be directly
-  delegated by the master to the online slaves. 
+  delegated by the master to the online slaves. This is as shown below:
 
-![Alt text][t4id1]
-  [t4id1]: ./.png 
+  ![Number of executors in Master](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/master_0.JPG) 
   
-![Alt text][t4id2]
-  [t4id2]: ./.png 
+> Before jenkins master delegates job to slaves, the build queue have two items as shown below (because the items 'testslavemaven' and 'workspacewipeout' have the same github project:
+  ![Trigger tasks](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/trigger_task4.png)
   
-![Alt text][t4id3]
-  [t4id3]: ./.png 
+> After the jobs are delegated to the two slaves "theslave" and "jenkins", the build executor status depicts that both the slaves are executing build.
+  ![Multiple slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/multipleslaves_task4.png)
   
-![Alt text][t4id4]
-  [t4id4]: ./.png 
+> The slave "jenkins" executed one job as shown below:
+![Jenkins slave working](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_consolescm.JPG)
+
+> The slave "theslave" executed another job as shown below:
+![theslave working](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/theslave_console.JPG)
+  
+> The slaves are online. 
+![Online slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/slavesidle.JPG)
   
 ##### The ability to retrieve the status of the build via http.
 > The status of the build can be retrieved by using the following 
   command: curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/job/testslavemaven/lastBuild/api/json
   
-  ![Alt text][t5id1]
-  [t5id1]: ./.png 
-  
-  ![Alt text][t5id2]
-  [t5id2]: ./.png 
-
+![Status response](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task5_consolehttp.JPG)
 
 > The configuration file (config.xml) for the Jenkins master and the job configuration file
   have been uploaded on the github.
