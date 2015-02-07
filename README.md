@@ -13,20 +13,18 @@ README
   Jenkins master. In our case "http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/"
   and select the checkbox "Active". This configuration can be seen below-
 
-  ![Alt text][t1id1]
-  [t1id1]: ./.png 
+[GitHook_configuration](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_githook.JPG)
+  
   
 > To demonstrate this task, the screenshot below is of the **console output**
   that reads the following line "Started by an SCM change" (which means it was triggered by a 
   git push)
 
-  ![Alt text][t1id2]
-  [t1id2]: ./.png 
+[SCM change](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildbyscm_task1.JPG)
 
 > The "Jenkins (git plugin)" in github further affirms that the last delivery was successful.
 
-  ![Alt text][t1id3]
-  [t1id3]: ./.png 
+[Success message](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/lastsuccess_task1.png)
 
 
 ##### The ability to setup dependencies for the project and restore to a clean state.
