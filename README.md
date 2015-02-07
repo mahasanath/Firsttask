@@ -43,6 +43,10 @@ ServerName HOSTNAME
 
 ####Tasks explained
 -------------------
+
+In Jenkins master , two items have been configured to use the same git project repository ( testslavemaven and workspacewipeout , as screen in the screen shots). This has been done to show how the push in one git repositry would trigger 2 builds and how they get delegated by the master to 2 slves that we would be creating. Each of these slaves have been configured to have just one executor each.   
+The task setup and abilities havebe en demostrated in the screenshos below:   
+
 #####1. The ability to trigger a build in response to a git commit via a git hook.
 
 > To configure Github to trigger a build in response to a push made by the user,
@@ -124,7 +128,7 @@ The commands in use are as follows:
 
 9. Copy the contents of id_rsa public key.    
    cd .ssh  
-   cat id_rsa.pub >> authorized_keys
+   "cat id_rsa.pub >> authorized_keys"
 
 10.Copy the id_rsa private key into jenkins manage credentials for "theslave" 
    
