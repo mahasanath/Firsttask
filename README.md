@@ -71,10 +71,14 @@ ServerName HOSTNAME
  ![Build is successful](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/nuildsuccess.JPG)
 
 > For restoring to a clean state:  
-  mvn clean
+  mvn clean install   
+  
 
 #####3. The ability to execute a build script (e.g., shell, maven)
-> The screenshots below demonstrate the task.
+> The screenshots below demonstrate the task. It installs all dependencies using Maven and is pom.xml to load all dependencies needed to build the project. It essentially executesa Maven script , that is the pom.xml file from the project directory. It is configured in the build setup in Jenkins as shown below.   
+
+![buildsetupjenkins](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/pom.xml_task3.JPG)  
+> Succesful build by downloading dependencies using pom.xml   
 
 ![BUILD SUCCESS](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildsuccess.png)
 
@@ -134,27 +138,36 @@ The commands in use are as follows:
 > Before jenkins master delegates job to slaves, the build queue have two items as shown below (because the items 'testslavemaven' and 'workspacewipeout' have the same github project:
   ![Trigger tasks](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/trigger_task4.png)
   
-> After the jobs are delegated to the two slaves "theslave" and "jenkins", the build executor status depicts that both the slaves are executing build.
-  ![Multiple slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/multipleslaves_task4.png)
+> After the jobs are delegated to the two slaves "theslave" and "jenkins", the build executor status depicts that both the slaves are executing build.   
+
+  ![Multiple slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/multipleslaves_task4.png)  
   
-> The slave "jenkins" executed one job as shown below:
-![Jenkins slave working](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_consolescm.JPG)
+  
+> The slave "jenkins" executed one job as shown below:   
+
+![Jenkins slave working](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_consolescm.JPG)  
+
 
 > The slave "theslave" executed another job as shown below:
 ![theslave working](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/theslave_console.JPG)
 
-> SSH authentication of 'theslave'
+> SSH authentication of 'theslave'  
+
 ![slaves authenticated](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/theslave_auth.JPG)
 
-> The slaves are idle as they don't have any task right now. 
+> The slaves are idle as they don't have any task right now.    
+
 ![Idle slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/slavesidle.JPG)
 
-> The slaves are online.
+> The slaves are online.  
+
 ![Online slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/after_theslavelaunched.JPG)
 
 #####5. The ability to retrieve the status of the build via http.
-> The status of the build can be retrieved by using the following 
-  command: curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/job/testslavemaven/lastBuild/api/json
+> The status of the build can be retrieved by using the following    
+
+  command:   
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/job/testslavemaven/lastBuild/api/json
   
 ![Status response](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task5_consolehttp.JPG)
 
