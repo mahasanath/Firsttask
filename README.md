@@ -11,38 +11,30 @@ README
   Jenkins master. In our case "http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/"
   and select the checkbox "Active". This configuration can be seen below-
 
-[GitHook_configuration](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_githook.JPG)
+![GitHook_configuration](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_githook.JPG)
   
 > To demonstrate this task, the screenshot below is of the **console output**
   that reads the following line "Started by an SCM change" (which means it was triggered by a 
   git push)
 
-[SCM change](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildbyscm_task1.JPG)
+![SCM change](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildbyscm_task1.JPG)
 
 > The "Jenkins (git plugin)" in github further affirms that the last delivery was successful.
 
-[Success message](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/lastsuccess_task1.png)
+![Success message](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/lastsuccess_task1.png)
 
 
 ##### The ability to setup dependencies for the project and restore to a clean state.
 >  The screenshots below demonstrate the task. When the project is first loaded, the dependencies are
    installed, target files are created and the project is built.
 
-  ![Alt text][t2id1]
-  [t2id1]: ./.png 
-
 > For restoring to a clean state:  
   mvn clean
-
-  ![Alt text][t2id2]
-  [t2id2]: ./.png 
 
 ##### The ability to execute a build script (e.g., shell, maven)
 > The screenshots below demonstrate the task.
 
-![Alt text][t3id3]
-  [t3id3]: ./.png  
-
+![BUILD SUCCESS](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildsuccess.png)
 
 ##### The ability to run a build on multiple nodes (e.g. jenkins slaves, go agents, or a spawned droplet/AWS.).
 >  To create and configure slave nodes (in the Jenkins master) that would be ready to accept the tasks delegated
@@ -95,17 +87,10 @@ The commands in use are as follows:
   changed the number of executors to 0. So that the incoming build request will be directly
   delegated by the master to the online slaves. 
 
-![Alt text][t4id1]
-  [t4id1]: ./.png 
+  ![Number of executors in Master](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/master_0.JPG) 
   
-![Alt text][t4id2]
-  [t4id2]: ./.png 
-  
-![Alt text][t4id3]
-  [t4id3]: ./.png 
-  
-![Alt text][t4id4]
-  [t4id4]: ./.png 
+  ![Trigger tasks](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task4_triggertasks.png)
+  ![Multiple slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/multipleslaves_task4.png)
   
 ##### The ability to retrieve the status of the build via http.
 > The status of the build can be retrieved by using the following 
