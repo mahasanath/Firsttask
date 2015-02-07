@@ -3,6 +3,42 @@ README
 
 ### BUILD Section
 
+Steps to setup Jenkins build server(Master) on an Ubuntu server.
+----------------------------------------------------------------
+> Install Jenkins
+  wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+  echo "deb http://pkg.jenkins-ci.org/debian binary/" | sudo tee -a /etc/apt/sources.list.d/jenkins.list
+  sudo apt-get update
+  sudo apt-get install jenkins
+
+> Install Apache
+  sudo apt-get install apache2
+  sudo a2enmod proxy
+  sudo a2enmod proxy_http
+
+> Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxy to port
+  <VirtualHost *:80>
+      ServerName HOSTNAME
+      ProxyRequests Off
+      <Proxy *>
+          Order deny,allow
+          Allow from all
+      </Proxy>
+      ProxyPreserveHost on
+      ProxyPass / http://localhost:8080/
+  </VirtualHost>
+
+> Enable it
+  sudo a2ensite jenkins
+  sudo service apache2 reload
+
+> Installing dependencies for our build server : Java / Maven / Git
+  sudo add-apt-repository ppa:webupd8team/java
+  sudo apt-get update
+  sudo apt-get install oracle-java7-installer maven git-core
+
+Tasks explained
+---------------
 ##### The ability to trigger a build in response to a git commit via a git hook.
 
 > To configure Github to trigger a build in response to a push made by the user,
