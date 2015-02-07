@@ -1,5 +1,3 @@
-# Firsttask
-
 README
 ======
 
@@ -14,7 +12,6 @@ README
   and select the checkbox "Active". This configuration can be seen below-
 
 [GitHook_configuration](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_githook.JPG)
-  
   
 > To demonstrate this task, the screenshot below is of the **console output**
   that reads the following line "Started by an SCM change" (which means it was triggered by a 
