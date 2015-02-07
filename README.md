@@ -20,16 +20,16 @@ README
 
 > Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxy to port
   
-  <VirtualHost *:80>
-      ServerName HOSTNAME
-      ProxyRequests Off
-      <Proxy *>
-          Order deny,allow
-          Allow from all
-      </Proxy>
-      ProxyPreserveHost on
-      ProxyPass / http://localhost:8080/
-  </VirtualHost>
+" <VirtualHost *:80>  
+ServerName HOSTNAME   
+  ProxyRequests Off  
+    <Proxy *>   
+    Order deny,allow   
+    Allow from all  
+    </Proxy>   
+    ProxyPreserveHost on   
+    ProxyPass / http://localhost:8080/  
+</VirtualHost> "
 
 > Enable it
   
