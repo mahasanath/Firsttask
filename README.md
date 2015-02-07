@@ -102,10 +102,16 @@ The commands in use are as follows:
 
 > The slave "theslave" executed another job as shown below:
 ![theslave working](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/theslave_console.JPG)
-  
-> The slaves are online. 
-![Online slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/slavesidle.JPG)
-  
+
+> SSH authentication of 'theslave'
+![slaves authenticated](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/theslave_auth.JPG)
+
+> The slaves are idle as they don't have any task right now. 
+![Idle slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/slavesidle.JPG)
+
+> The slaves are online.
+![Online slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/after_theslavelaunched.JPG)
+
 ##### The ability to retrieve the status of the build via http.
 > The status of the build can be retrieved by using the following 
   command: curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/job/testslavemaven/lastBuild/api/json
