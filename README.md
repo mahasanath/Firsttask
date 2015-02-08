@@ -19,7 +19,7 @@ README
   sudo a2enmod proxy_http
 
 > Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxy to po
-" <VirtualHost *:80>  
+< VirtualHost *:80 >  
 ServerName HOSTNAME   
   ProxyRequests Off  
     <Proxy *>   
@@ -28,7 +28,7 @@ ServerName HOSTNAME
     </Proxy>   
     ProxyPreserveHost on   
     ProxyPass / http://localhost:8080/  
-</VirtualHost> "
+< / VirtualHost > 
 
 > Enable it
   
@@ -140,13 +140,15 @@ The commands in use are as follows:
   ![Number of executors in Master](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/master_0.JPG) 
   
 > Before jenkins master delegates job to slaves, the build queue have two items as shown below (because the items 'testslavemaven' and 'workspacewipeout' have the same github project:
-  ![Trigger tasks](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/trigger_task4.png)
+  ![Trigger tasks](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/trigger_task4.png)   
+  
   
 > After the jobs are delegated to the two slaves "theslave" and "jenkins", the build executor status depicts that both the slaves are executing build.   
 
   ![Multiple slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/multipleslaves_task4.png)  
   
-  
+      
+      
 > The slave "jenkins" executed one job as shown below:   
 
 ![Jenkins slave working](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_consolescm.JPG)  
@@ -159,11 +161,11 @@ The commands in use are as follows:
 
 ![slaves authenticated](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/theslave_auth.JPG)
 
-> The slaves are idle as they don't have any task right now.    
+> The slaves are idle (but online) when they dont have any tasks to execute.    
 
 ![Idle slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/slavesidle.JPG)
 
-> The slaves are online.  
+> The screeshot below shows that the slaveis connected and online.   
 
 ![Online slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/after_theslavelaunched.JPG)
 
