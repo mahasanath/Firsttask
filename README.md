@@ -24,7 +24,7 @@ sudo apt-get install jenkins
 
 > Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxying requests.  
 
-     ```bash
+      ```bash
           <VirtualHost *:80>
           	ServerName HOSTNAME
           	ProxyRequests Off
@@ -35,7 +35,7 @@ sudo apt-get install jenkins
           	ProxyPreserveHost on
           	ProxyPass / http://localhost:8080/
           </VirtualHost>
-    ```
+      ```
 
 > Enable it
 
@@ -105,7 +105,7 @@ The task setup and abilities havebe en demostrated in the screenshos below:
 - Create a slave user and generate rsa public and private keys for it.
 - Copy the private key to Jenkins (under manage credentials using "Ssh slaves plugin") for that particular slave.
 - Installed all the required tools for building the target project(Maven, Jenkins and Git).
-
+```bash
 The commands in use are as follows:
 
 1. Installing required dependencies:  
@@ -141,7 +141,8 @@ The commands in use are as follows:
    "cat id_rsa.pub >> authorized_keys"
 
 10.Copy the id_rsa private key into jenkins manage credentials for "theslave" 
-   
+  ```
+  
 > In our project, we have created two slaves 'theslave' and 'jenkins' to demonstrate 
   the ability to run build on multiple nodes. For the purpose of this task, we have 
   changed the number of executors to 0. So that the incoming build request will be directly
