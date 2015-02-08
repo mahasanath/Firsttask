@@ -24,7 +24,7 @@ sudo apt-get install jenkins
 
 > Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxying requests.  
 
-          ```bash
+     ```bash
           <VirtualHost *:80>
           	ServerName HOSTNAME
           	ProxyRequests Off
@@ -35,7 +35,7 @@ sudo apt-get install jenkins
           	ProxyPreserveHost on
           	ProxyPass / http://localhost:8080/
           </VirtualHost>
-          ```
+    ```
 
 > Enable it
 
