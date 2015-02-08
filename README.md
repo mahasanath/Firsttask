@@ -18,17 +18,20 @@ README
   sudo a2enmod proxy  
   sudo a2enmod proxy_http
 
-> Open /etc/apache2/sites-available/jenkins.conf and add the following to enable proxy to po
-< VirtualHost *:80 >  
-ServerName HOSTNAME   
-  ProxyRequests Off  
-    <Proxy *>   
-    Order deny,allow   
-    Allow from all  
-    </Proxy>   
-    ProxyPreserveHost on   
-    ProxyPass / http://localhost:8080/  
-< / VirtualHost > 
+> Open `/etc/apache2/sites-available/jenkins.conf` and add the following to enable proxying requests.  
+
+          ```bash
+          <VirtualHost *:80>
+          	ServerName HOSTNAME
+          	ProxyRequests Off
+          	<Proxy *>
+          		Order deny,allow
+          		Allow from all
+          	</Proxy>
+          	ProxyPreserveHost on
+          	ProxyPass / http://localhost:8080/
+          </VirtualHost>
+          ```
 
 > Enable it
   
@@ -44,7 +47,8 @@ ServerName HOSTNAME
 ####Tasks explained
 -------------------
 
-In Jenkins master , two items have been configured to use the same git project repository ( testslavemaven and workspacewipeout , as screen in the screen shots). This has been done to show how the push in one git repositry would trigger 2 builds and how they get delegated by the master to 2 slves that we would be creating. Each of these slaves have been configured to have just one executor each.   
+In Jenkins master , two items have been configured to use the same git project repository ( testslavemaven and workspacewipeout , as seen in the screen shots). This has been done to show how the push in one git repositry would trigger 2 builds and how they get delegated by the master to the 2 slaves that we would be creating. Each of these slaves have been configured to have just one executor each( atmost one build in each to effeciently demonstrate the task). Our setup of the build server delegates all build requests from master to the idle slaves. The status of the builds can be viewed in the Jenkins master server itself.     
+
 The task setup and abilities havebe en demostrated in the screenshos below:   
 
 #####1. The ability to trigger a build in response to a git commit via a git hook.
