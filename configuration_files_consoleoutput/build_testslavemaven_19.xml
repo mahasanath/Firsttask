@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenModuleSetBuild plugin="maven-plugin@2.8">
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.triggers.SCMTrigger_-SCMTriggerCause/>
+      </causes>
+    </hudson.model.CauseAction>
+    <hudson.triggers.SCMTrigger_-BuildAction/>
+    <hudson.plugins.git.util.BuildData plugin="git@2.3.4">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.15.0">
+              <sha1>ee027a4a6d7794bb12a7354698422c26c4ca587a</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>19</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>https://github.com/mahasanath/Firsttask.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.3.4">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/home/jenkins/workspace/testslavemaven</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <hudson.maven.reporters.SurefireAggregatedReport>
+      <descriptions class="concurrent-hash-map"/>
+      <failCount>0</failCount>
+      <skipCount>0</skipCount>
+      <totalCount>1</totalCount>
+      <children>
+        <hudson.tasks.test.AggregatedTestResultAction_-Child plugin="junit@1.4">
+          <name>jenkintest:sample</name>
+          <build>19</build>
+        </hudson.tasks.test.AggregatedTestResultAction_-Child>
+      </children>
+    </hudson.maven.reporters.SurefireAggregatedReport>
+    <hudson.maven.reporters.MavenAggregatedArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+    </hudson.maven.reporters.MavenAggregatedArtifactRecord>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>jenkintest:sample:pom.xml</string>
+          <string>2865d646ed4d1ebe36059e22b3595603</string>
+        </entry>
+        <entry>
+          <string>junit:junit-3.8.1.jar</string>
+          <string>1f40fb782a4f2cf78f161d32670f7a3a</string>
+        </entry>
+        <entry>
+          <string>jenkintest:sample-0.0.1-SNAPSHOT.jar</string>
+          <string>57c2007f7bf2d9ebd934e21b4ae1edfc</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+  </actions>
+  <timestamp>1423267423534</timestamp>
+  <startTime>1423267423535</startTime>
+  <result>SUCCESS</result>
+  <duration>13858</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>jenkins</builtOn>
+  <workspace>/home/jenkins/workspace/testslavemaven</workspace>
+  <hudsonVersion>1.598</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@2.3.4">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.RegularImmutableSortedSet">
+    <string>friendsgus</string>
+  </culprits>
+  <mavenVersionUsed>3.0.5</mavenVersionUsed>
+</hudson.maven.MavenModuleSetBuild>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
+    <string>jenkins.diagnostics.SecurityIsOffMonitor</string>
+  </disabledAdministrativeMonitors>
+  <version>1.598</version>
+  <numExecutors>0</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.AuthorizationStrategy$Unsecured"/>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
+  <jdks>
+    <jdk>
+      <name>java</name>
+      <home>/usr/lib/jvm/java-7-oracle/</home>
+      <properties/>
+    </jdk>
+  </jdks>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds>
+    <hudson.plugins.ec2.EC2Cloud plugin="ec2@1.26">
+      <name>ec2-us-west-2</name>
+      <useInstanceProfileForCredentials>false</useInstanceProfileForCredentials>
+      <accessId>AKIAJVL6EN6YRXDRLC3Q</accessId>
+      <secretKey>OTWHIF+rdUEtt8RjHVeoLQcXD64lpnad0HxUmPTrKuSVF+8TkxuBHitdr1R4dEbLO1k8ZevBSN0Cd44zTzqlMg==</secretKey>
+      <privateKey>
+        <privateKey>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</privateKey>
+      </privateKey>
+      <instanceCap>1</instanceCap>
+      <templates>
+        <hudson.plugins.ec2.SlaveTemplate>
+          <ami>ami-29ebb519</ami>
+          <description>jenkins </description>
+          <zone>us-west-2</zone>
+          <securityGroups>launch-wizard-7</securityGroups>
+          <remoteFS>/var/lib/jenkins_slave</remoteFS>
+          <type>T2Micro</type>
+          <labels></labels>
+          <mode>NORMAL</mode>
+          <initScript></initScript>
+          <tmpDir></tmpDir>
+          <userData></userData>
+          <numExecutors>1</numExecutors>
+          <remoteAdmin>ubuntu</remoteAdmin>
+          <jvmopts></jvmopts>
+          <subnetId></subnetId>
+          <idleTerminationMinutes>30</idleTerminationMinutes>
+          <iamInstanceProfile></iamInstanceProfile>
+          <useEphemeralDevices>false</useEphemeralDevices>
+          <customDeviceMapping></customDeviceMapping>
+          <instanceCap>1</instanceCap>
+          <stopOnTerminate>false</stopOnTerminate>
+          <usePrivateDnsName>false</usePrivateDnsName>
+          <associatePublicIp>false</associatePublicIp>
+          <useDedicatedTenancy>false</useDedicatedTenancy>
+          <amiType class="hudson.plugins.ec2.UnixData">
+            <rootCommandPrefix>sudo</rootCommandPrefix>
+            <sshPort>22</sshPort>
+          </amiType>
+          <launchTimeout>2147483647</launchTimeout>
+        </hudson.plugins.ec2.SlaveTemplate>
+      </templates>
+      <region>us-west-2</region>
+    </hudson.plugins.ec2.EC2Cloud>
+  </clouds>
+  <slaves>
+    <slave>
+      <name>theslave</name>
+      <description></description>
+      <remoteFS>/home/theslave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.plugins.sshslaves.SSHLauncher" plugin="ssh-slaves@1.9">
+        <host>ec2-54-149-66-160.us-west-2.compute.amazonaws.com</host>
+        <port>22</port>
+        <credentialsId>4249970a-99e3-4957-be6d-e7c311e96324</credentialsId>
+        <maxNumRetries>0</maxNumRetries>
+        <retryWaitTime>0</retryWaitTime>
+      </launcher>
+      <label></label>
+      <nodeProperties>
+        <hudson.slaves.EnvironmentVariablesNodeProperty>
+          <envVars serialization="custom">
+            <unserializable-parents/>
+            <tree-map>
+              <default>
+                <comparator class="hudson.util.CaseInsensitiveComparator"/>
+              </default>
+              <int>1</int>
+              <string>MAVEN_HOME</string>
+              <string>/usr/share/maven/</string>
+            </tree-map>
+          </envVars>
+        </hudson.slaves.EnvironmentVariablesNodeProperty>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>/usr/bin/git</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
+      <userId>anonymous</userId>
+    </slave>
+    <slave>
+      <name>jenkins</name>
+      <description></description>
+      <remoteFS>/home/jenkins</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.plugins.sshslaves.SSHLauncher" plugin="ssh-slaves@1.9">
+        <host>ec2-54-148-80-1.us-west-2.compute.amazonaws.com</host>
+        <port>22</port>
+        <credentialsId>0772e0dc-4cb0-448c-8827-81d43689f63f</credentialsId>
+        <maxNumRetries>0</maxNumRetries>
+        <retryWaitTime>0</retryWaitTime>
+      </launcher>
+      <label></label>
+      <nodeProperties>
+        <hudson.slaves.EnvironmentVariablesNodeProperty>
+          <envVars serialization="custom">
+            <unserializable-parents/>
+            <tree-map>
+              <default>
+                <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../../../slave/nodeProperties/hudson.slaves.EnvironmentVariablesNodeProperty/envVars/tree-map/default/comparator"/>
+              </default>
+              <int>1</int>
+              <string>MAVEN_HOME</string>
+              <string>/usr/share/maven/</string>
+            </tree-map>
+          </envVars>
+        </hudson.slaves.EnvironmentVariablesNodeProperty>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>/usr/bin/git</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
+      <userId>mahasanath</userId>
+    </slave>
+  </slaves>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <primaryView>All</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label></label>
+  <nodeProperties/>
+  <globalNodeProperties/>
+  <noUsageStatistics>true</noUsageStatistics>
+</hudson>
