@@ -67,6 +67,10 @@ The task setup and abilities havebe en demostrated in the screenshos below:
 
 ![GitHook_configuration](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task1_githook.JPG)
   
+> In jenkins Master server, add the following to the configuration,  
+
+  ![scm_config](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/scm_change_config.JPG)  
+  
 > To demonstrate this task, the screenshot below is of the **console output**
   that reads the following line "Started by an SCM change" (which means it was triggered by a 
   git push)
