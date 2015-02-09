@@ -1,8 +1,9 @@
-## Devops - Build Milestone  
- 
-#### Mahalaxmi Sanathkumar(smahala@ncsu.edu)  & Parul Upadhyaya (pupadhy2@ncsu.edu)
----------------------------------------------------------------------------------------
+## Devops - Build Milestone    
 
+```bash
+##### Mahalaxmi Sanathkumar (smahala@ncsu.edu)  & Parul Upadhyaya (pupadhy2@ncsu.edu)
+---------------------------------------------------------------------------------------
+```
 
 #### Steps to setup Jenkins build server(Master) on an Ubuntu server.
 ---------------------------------------------------------------------
