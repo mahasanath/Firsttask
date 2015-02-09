@@ -1,7 +1,5 @@
-README
-======
-
-### BUILD Section
+ Devops - Build Milestone / Mahalaxmi Sanathkumar(smahala@ncsu.edu)  & Parul Upadhyaya (pupadhy2@ncsu.edu)
+================================================================================================================
 
 #### Steps to setup Jenkins build server(Master) on an Ubuntu server.
 ---------------------------------------------------------------------
@@ -50,6 +48,8 @@ sudo apt-get install jenkins
   sudo apt-get update  
   sudo apt-get install oracle-java7-installer maven git-core
 ```
+Once this is setup, configured Jenkins master using its GUI. The config.xml for the Jenkins master and the project item are attched in the "configuration_files_consoleoutput" folder of github.   
+
 ####Tasks explained
 -------------------
 
