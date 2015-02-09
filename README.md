@@ -1,7 +1,7 @@
 ## Devops - Build Milestone    
 
 ```bash
-#### Mahalaxmi Sanathkumar (smahala@ncsu.edu)  & Parul Upadhyaya (pupadhy2@ncsu.edu)
+ Mahalaxmi Sanathkumar (smahala@ncsu.edu)  & Parul Upadhyaya (pupadhy2@ncsu.edu)
 ---------------------------------------------------------------------------------------
 ```
 
