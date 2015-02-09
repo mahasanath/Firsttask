@@ -195,7 +195,7 @@ The commands to setup the ssh serve using online resources:
 curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/job/testslavemaven/lastBuild/api/json
   ```   
   
-![Status response](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task5_consolehttp.JPG)
+![Status response](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task5.JPG)
 
 > The configuration file (config.xml) for the Jenkins master and the job configuration file
   have been uploaded on the github.
