@@ -114,7 +114,7 @@ The console output shown below demostrates how the target folder containing prev
 - Copy the private key to Jenkins (under manage credentials using "Ssh slaves plugin") for that particular slave.
 - Installed all the required tools for building the target project(Maven, Jenkins and Git).
 ```bash
-The commands in use are as follows:
+The commands to setup the ssh serve using online resources:
 
 1. Installing required dependencies:  
    sudo add-apt-repository ppa:webupd8team/java  
