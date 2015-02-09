@@ -100,6 +100,10 @@ The task setup and abilities havebe en demostrated in the screenshos below:
 
 ![BUILD SUCCESS](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/buildsuccess.png)
 
+The console output shown below demostrates how the target folder containing previous buids snapshots, classes, generated files and build tasks are removed before building the project. Thus explains that one build does not affect the other. Achieved using "mvn clean install."   
+
+![clean](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/remove_targets_clean.JPG)
+
 #####4. The ability to run a build on multiple nodes (e.g. jenkins slaves, go agents, or a spawned droplet/AWS.).
 >  To create and configure slave nodes (in the Jenkins master) that would be ready to accept the tasks delegated
    by the master. The following steps are for setup:
