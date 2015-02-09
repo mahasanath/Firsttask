@@ -189,10 +189,11 @@ The commands to setup the ssh serve using online resources:
 ![Online slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/after_theslavelaunched.JPG)
 
 #####5. The ability to retrieve the status of the build via http.
-> The status of the build can be retrieved by using the following    
+> The status of the build can be retrieved by using the following command:  
 
-  command:   
+```bash
 curl -i -H "Accept: application/json" -H "Content-Type: application/json" http://ec2-54-148-38-238.us-west-2.compute.amazonaws.com/job/testslavemaven/lastBuild/api/json
+  ```   
   
 ![Status response](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/task5_consolehttp.JPG)
 
