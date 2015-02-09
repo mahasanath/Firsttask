@@ -167,9 +167,11 @@ The commands to setup the ssh serve using online resources:
   
 > After the jobs are delegated to the two slaves "theslave" and "jenkins", the build executor status depicts that both the slaves are executing build.   
 
-  ![Multiple slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/multipleslaves_task4.png)  
-  
-      
+  ![Multiple slaves](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/multipleslaves_task4.png)
+
+    List of configured nodes, including master and 2 slaves viz. 'jenkins' and 'theslave'
+
+  ![list allnodes](https://github.com/mahasanath/Firsttask/blob/master/milestone1_devops_screenshots/available_nodes.JPG)  
       
 > The slave "jenkins" executed one job as shown below:   
 
