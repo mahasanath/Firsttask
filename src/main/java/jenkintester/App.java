@@ -13,6 +13,6 @@ public class App
         System.out.println( "Hello World! Checking Devops" );
         System.out.println( "Hello World! +++++)(((" );
         System.out.println( "Hello World!" );
-        System.out.println( ":testing Canary" );
+        System.out.println( ":testing Canary: CHECK" );
     }
 }
